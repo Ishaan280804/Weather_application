@@ -1,116 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-image: url("img/bg1.jpg");
-  min-height: 92vh;
-  overflow: auto;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("img/bg2.jpg"); /* Changed background */
+  min-height: 100vh;
+  overflow: hidden;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-size: cover;
+  color: #f4f4f9; /* Text color change */
 }
 
 .header h4 {
-  color: #da1e4e;
-  font-weight: 700;
-  font-size: 2.4rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.app-main {
-  min-height: 10vh;
-  width: 30vw;
-  margin: 50px auto;
-  padding: 20px;
+  color: #fff; /* Change to white for better contrast */
+  font-weight: 600;
+  font-size: 3rem; /* Increased size */
   text-align: center;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  border-radius: 15px;
-  background: #c0dfec; /* fallback for old browsers */
+  margin-top: 50px;
+  letter-spacing: 1.5px; /* Added spacing */
+}
+
+.app-main {
+  min-height: 50vh;
+  width: 40vw;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border-radius: 20px;
+  background: #1f1c2c; /* Darker gradient */
   background: -webkit-linear-gradient(
-    to top,
-    #92fe9d,
-    #c0dfec
-  ); /* Chrome 10-25, Safari 5.1-6 */
+    to bottom right,
+    #928dab,
+    #1f1c2c
+  );
   background: linear-gradient(
-    to top,
-    #92fe9d,
-    #c0dfec
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    to bottom right,
+    #928dab,
+    #1f1c2c
+  );
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.app-main:hover {
+  transform: scale(1.05); /* Added hover effect */
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 10px 20px;
+}
+
 .app-main > * {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
+
 .input-box {
   width: 100%;
-  background: azure;
-  color: #e4603a;
-  font-weight: 500;
+  background: #333; /* Dark background */
+  color: #fff;
+  font-weight: 600;
   border: none;
-  font-size: 1.7rem;
-  border-radius: 10px;
-  padding: 10px;
+  font-size: 2rem;
+  border-radius: 15px;
+  padding: 15px;
   text-align: center;
   outline: none;
-  border: none;
+  transition: background 0.3s ease;
+}
+
+.input-box:focus {
+  background: #555;
 }
 
 .weather-body {
   color: #fff;
-  padding: 20px;
-  line-height: 2rem;
-  border-radius: 10px;
-  background-color: #eff1f3;
-  display: none;
+  padding: 30px;
+  line-height: 2.5rem;
+  border-radius: 15px;
+  background-color: #000;
   background: linear-gradient(
-    to top,
-    #da1e4e,
-    #e4603a
-  );
+    to bottom right,
+    #ff416c,
+    #ff4b2b
+  ); /* Bolder gradient */
+  display: none;
 }
+
 .location-deatils {
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
 .weather-status {
-  padding: 20px;
+  padding: 30px;
+  font-size: 1.8rem;
 }
+
 .temp {
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 20px 0px;
-  text-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 6rem;
+  font-weight: 900;
+  text-shadow: 3px 5px rgba(0, 0, 0, 0.3);
 }
+
 .weather {
-  margin-top: 25px;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  font-size: 2.5rem;
 }
+
 .min-max {
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .day_details {
-  padding: 20px;
-}
-.sun-detail,
-.basic {
-  font-size: 1rem;
-}
-#weather-icon {
-  color: black;
+  padding: 25px;
 }
 
+.sun-detail,
+.basic {
+  font-size: 1.2rem;
+}
+
+#weather-icon {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
 
 @media screen and (max-width: 800px) {
   .app-main {
-    width: 95%;
-    padding: 10px;
+    width: 90%;
+    padding: 20px;
   }
   body {
-    min-height: 94vh;
+    min-height: 100vh;
   }
 }
